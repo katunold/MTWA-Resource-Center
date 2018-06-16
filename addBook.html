@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="text/css" rel="stylesheet" href="general.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="Untitled-2.css" rel="stylesheet" type="text/css">
+<link href="form.css" rel="stylesheet" type="text/css" />
+<script src="respond.min.js"></script>
+<script type="text/javascript">
+<!--
+function verify(){
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET","Accession.php?a="+ document.getElementById("accessionNo").value,false);
+	xmlhttp.send(null);
+	document.getElementById("duplicate").innerHTML = xmlhttp.responseText;
+	document.getElementById("duplicate").style.display = 'block';
+	document.getElementById("accessionNo").reset();
+	
+	}
+//-->
+</script>
+<title>Resource Center</title>
+</head>
+<body>
+<div id="head" style="margin-top:0px;" align="center" class="head">
+<p align="center" id="tito" class="tito">
+<img src="ugandanCoatofarms.jpg" alt="Coat of arms" width="80px" height="80px" /><br />
+MINISTRY OF TOURISM, WILDLIFE &amp; ANTIQUITIES<br />
+<span id="subtito" style="letter-spacing:0.9em; color:#090">Resource Center</span>
+</p>
+</div>
+    <ul>
+        <li><a href="index.php">View Records</a></li>
+  		<li><a href="addBook.html" class="act3">Add Book</a></li>
+	</ul>
+<div id="bcontent" class="bcontent" >
+<div id="bcontent1"></div>
+<div id="bcontent2" align="center" >
+    <div align="center" style="width:100%;" id="form1">
+    	<form method="post" action="Addbook.php" onsubmit="alert('Book Recorded successfully');" class="form">
+        	<table>
+            	<tr>
+                <td><label for="bookTitle">Book Title</label></td>
+                <td><input type="text" name="title" id="title" style="text-transform: capitalize;"  required="required"/></td>
+                </tr>
+            	<tr>
+                <td><label for="authors">Author(s)</label></td>
+                <td><input type="text" name="author" id="author" style="text-transform: capitalize;"/></td>
+                </tr>
+            	<tr>
+                <td><label for="edition">Edition</label></td>
+                <td><input type="text" name="edition" id="edition"/></td>
+                </tr>
+            	<tr>
+                <td><label for="volume">Volume</label></td>
+                <td><input type="text" name="volume" id="volume"/></td>
+                </tr>
+            	<tr>
+                <td><label for="publisher">Publisher</label></td>
+                <td><input type="text" name="publisher" id="publisher"/></td>
+                </tr>
+            	<tr>
+                <td><label for="yop">Year of Publication</label></td>
+                <td><input type="number" name="yop" id="yop" min="1880" max="2050" /></td>
+                </tr>
+             	<tr>
+                <td><label for="location">Location</label></td>
+                <td><input type="text" name="abc" id="location" required="required" /></td>
+                </tr>
+            	<tr>
+                <td><label for="subject">Subject</label></td>
+                <td><input type="text" name="subject" id="subject" /></td>
+                </tr>
+                <tr>
+                <td><label for="accessionNo">Accession Number</label></td>
+                <td><input type="text" name="accessionNo" id="accessionNo" onblur="verify();" required="required" /><br />
+                <label id="duplicate" style="display:none"></label>
+                </td>
+                </tr>
+                <tr>
+             	<td><label for="isbn">ISBN/ISSN</label></td>
+                <td><input type="text" name="isbn" id="isbn" /></td>
+                </tr>
+                <tr>
+                <td colspan="2"  align="center" class="submit"><input type="Submit" name="submit" value="Submit" /></td>
+                </tr>
+            </table>
+      </form>
+</div>
+</div>
+<div id="footer" align="center" class="footer">
+<p id="foot" class="foot">
+&copy;copyright Ministry of Tourism, Wildlife &amp; Antiquities<br />  
+<span style="color:#03F">Developed by :</span> Katumba Arnold<br />  
+<span style="color:#03F">email :</span> katunold94@gmail.com
+</p>
+</div>
+</div>
+</body>
+</html>
